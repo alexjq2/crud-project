@@ -34,7 +34,7 @@ function App() {
     setUserToDelete(user)
   }
   
-/*DELETE, CANCEL DELETE(FUNCTION)*/
+/*DELETE,  CANCEL DELETE(FUNCTION)*/
   const deleteUser = (user) => {
     axios
       .delete(`https://users-crud.academlo.tech/users/${user.id}/`)

@@ -41,9 +41,10 @@ body{
   box-shadow: 0px 6px 6px 0 var(--DivideColor);
 }
 .sumary__list button{
-  height: 35px;
-  width: 120px;
+  height: 30px;
+  width: 110px;
   border: none;
+  border-radius: 45%;
   background-color: var(--TextIcon);
   color: var(--PrimaryColorD);
   box-shadow: 0 0 3px 3px var(--DivideColor);
@@ -141,7 +142,7 @@ body{
   max-width: 500px;
   height: 70vh;
   max-height: 400px;
-  border-radius: 20px;
+  border-radius: 29px;
   display: flex;
   justify-content: center;
   align-items: center;
