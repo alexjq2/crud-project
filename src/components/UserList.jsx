@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 
 const UserList = ({ usersList, selectUser, getForm, warning }) => {
     
     const orderedList = usersList.sort((a, b) => a.first_name.localeCompare(b.first_name));
 
     return (
-        <div className='list__users'>
+        <div className='list__users'> 
             <h2>Registro de miembros</h2>
             <div className='sumary__list'>
                 <p><strong> Usuarios actuales: </strong>{usersList.length}</p>
@@ -32,5 +32,11 @@ const UserList = ({ usersList, selectUser, getForm, warning }) => {
         </div>
     );
 };
+    UserList.propTypes = {
+    usersList: PropTypes.array.isRequired, 
+    selectUser: PropTypes.func.isRequired, 
+    getForm: PropTypes.func.isRequired, 
+    warning: PropTypes.func.isRequired, 
+  };
 
 export default UserList;

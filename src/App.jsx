@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import UsersForm from './components/User.Form'
+import UsersForm from './components/UserForm'
 import UserList from './components/UserList'
 import axios from 'axios'
 import WarningDelete from './components/WarningDelete'
@@ -19,7 +19,7 @@ function App() {
 
   const getUsers = () => {
     axios
-      .get(`https://users-crud.academlo.tech/users/`)
+      .get(`https://users-crud-zbo9.onrender.com/users/`)
       .then(res => setUsersList(res.data))
   }
 
@@ -37,7 +37,7 @@ function App() {
 /*DELETE,  CANCEL DELETE(FUNCTION)*/
   const deleteUser = (user) => {
     axios
-      .delete(`https://users-crud.academlo.tech/users/${user.id}/`)
+      .delete(`https://users-crud-zbo9.onrender.com/users/${user.id}/`)
       .then(() => getUsers());
 
     setAlert(false)

@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 const WarningDelete = ({userToDelete, deleteUser, alert, cancelDelete}) => {
     
@@ -23,5 +23,11 @@ const WarningDelete = ({userToDelete, deleteUser, alert, cancelDelete}) => {
         </div>
     );
 };
+    WarningDelete.propTypes = {
+    userToDelete: PropTypes.object.isRequired, 
+    deleteUser: PropTypes.func.isRequired, 
+    alert: PropTypes.bool.isRequired, 
+    cancelDelete: PropTypes.func.isRequired, 
+  };
 
 export default WarningDelete;

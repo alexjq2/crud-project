@@ -1,7 +1,7 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form"
-
+import PropTypes from 'prop-types';
 
 const UserForm = ({ getUsers, userSelected, setUserSelected, closeForm }) => {
 
@@ -21,13 +21,13 @@ const UserForm = ({ getUsers, userSelected, setUserSelected, closeForm }) => {
         status()
         if (userSelected) {
             axios
-                .put(`https://users-crud.academlo.tech/users/${userSelected.id}/`, data)
+                .put(`https://users-crud-zbo9.onrender.com/users/${userSelected.id}/`, data)
                 .then(() => {
                     getUsers()
                 });
         } else {
             axios
-                .post("https://users-crud.academlo.tech/users/", data)
+                .post("https://users-crud-zbo9.onrender.com/users/", data)
                 .then(() => {
                     getUsers();
                     reset(inputNull);
@@ -85,5 +85,12 @@ const UserForm = ({ getUsers, userSelected, setUserSelected, closeForm }) => {
         </div>
     );
 };
+    UserForm.propTypes = {
+    getUsers: PropTypes.func.isRequired, 
+    userSelected: PropTypes.object, 
+    setUserSelected: PropTypes.func,
+    closeForm: PropTypes.func,
+  };
+
 
 export default UserForm;
