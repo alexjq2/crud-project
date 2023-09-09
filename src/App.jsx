@@ -77,7 +77,7 @@ function App() {
         deleteUser={deleteUser}
         cancelDelete={cancelDelete}
       />
-      <footer><p><strong></strong> ©️ Hecho por  Pinedo y Quispe | 2023 🦙 </p></footer>
+      <footer><p><strong></strong> ©️ Hecho por Quispe | 2023 🦙 </p></footer>
     </div>
   )
 }
